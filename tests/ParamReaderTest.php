@@ -12,7 +12,7 @@ use function count;
 class ParamReaderTest extends TestCase
 {
     /** @var ParamReader  */
-    private $reader;
+    protected $reader;
 
     protected function setUp(): void
     {
@@ -26,7 +26,6 @@ class ParamReaderTest extends TestCase
     {
         return [
             [FakeAnnotationConsumer::class],
-            [FakeAttributeConsumer::class],
         ];
     }
 
