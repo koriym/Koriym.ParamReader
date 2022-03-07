@@ -17,7 +17,7 @@ $reader = new PramReader();
 $user = $reader->getParametrAnnotation(new ReflectionParameter([Consumer::class, '__construct'], 'name'), User::class);
 assert($user instanceof User);
 
-$users = $reader->getParametrAnnotation(new ReflectionParameter([Consumer::class, '__construct'], 'name'));
+$users = $reader->getParametrAnnotations(new ReflectionParameter([Consumer::class, '__construct'], 'name'));
 assert($users[0] instanceof User);
 assert($users[1] instanceof Foo);
 ````
