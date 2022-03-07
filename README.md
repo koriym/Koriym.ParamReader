@@ -1,8 +1,8 @@
 # Koriym.ParamReader
 
-This is a meta-information reader for method parameter to get attributes or annotations.
+This is a meta data reader to get attributes or annotations from method parameters.
 
-Although doctine/annotation cannot annotate method parameters, this reader treats annotations of properties with the same names as method parameters as method parameter metadata.
+Although [doctine/annotation](https://github.com/doctrine/annotations) cannot annotate method parameters, this reader treats annotations of properties with the same names as method parameters as method parameter metadata.
 
 This is especially useful when you want to prepare metadata for injection.
 
@@ -50,3 +50,6 @@ class Consumer
 }
 ```
 
+## Related
+
+* [koriym/attributes](https://github.com/koriym/Koriym.Attributes)

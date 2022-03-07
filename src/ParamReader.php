@@ -60,22 +60,22 @@ final class ParamReader implements ParamReaderInterface
     /**
      * {@inheritDoc}
      *
-     * @param class-string<T> $class
+     * @param class-string<T> $annotation
      *
      * @return T|null
      *
      * @psalm-suppress MoreSpecificImplementedParamType
      */
-    public function getParametrAnnotation(ReflectionParameter $param, string $class): ?object
+    public function getParametrAnnotation(ReflectionParameter $param, string $annotation): ?object
     {
         if (PHP_VERSION_ID < 80000) {
-            return $this->readAnnotation($param, $class);
+            return $this->readAnnotation($param, $annotation);
         }
 
         /** @var array<ReflectionAttribute> $attributes */
-        $attributes = $param->getAttributes($class);
+        $attributes = $param->getAttributes($annotation);
         if ($attributes === []) {
-            return $this->readAnnotation($param, $class);
+            return $this->readAnnotation($param, $annotation);
         }
 
         $attribute = $attributes[0];
