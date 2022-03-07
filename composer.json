@@ -1,6 +1,6 @@
 {
     "name": "koriym/param-reader",
-    "description": "",
+    "description": "An annotation/attribute reader for method parameter",
     "license": "MIT",
     "authors": [
         {
@@ -78,5 +78,8 @@
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
         }
+    },
+    "suggest": {
+        "koriym/attributes": "doctrine/annotation Reader interface in order to read both doctrine/annotation and PHP 8 attributes."
     }
 }
